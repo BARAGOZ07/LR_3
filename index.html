@@ -1,11 +1,11 @@
-```html
 <!DOCTYPE html>
+
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задание 1</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,21 +13,15 @@
 
     <header id="header">
 
+        ```
         <div class="header-content">
 
             <!-- Логотип -->
             <div class="logo">
                 <a href="index.html">
                     <img src="doroga_razmetka_dal_167834_2560x1600.jpg"
-                         width="60"
-                         height="60"
                          alt="Логотип">
                 </a>
-            </div>
-
-            <!-- Название сайта -->
-            <div class="site-name">
-                <h1>Мой сайт</h1>
             </div>
 
             <!-- Меню -->
@@ -37,13 +31,19 @@
                 <a href="#form">Ссылка 3</a>
             </nav>
 
+            <!-- Название сайта -->
+            <div class="site-name">
+                <h1>Мой сайт</h1>
+            </div>
+
         </div>
+        ```
 
     </header>
 
-
     <main class="content">
 
+        ```
         <h1>Гиперссылки</h1>
 
         <section id="links">
@@ -141,7 +141,6 @@
                 </li>
 
                 <li>
-
                     <img src="doroga_razmetka_dal_167834_2560x1600.jpg"
                          width="300"
                          height="150"
@@ -159,7 +158,6 @@
                               href="https://google.com">
 
                     </map>
-
                 </li>
 
                 <li>
@@ -225,74 +223,78 @@
 
         <h2 id="table">Таблица</h2>
 
-        <table>
+        <div class="table-wrapper">
 
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Имя</th>
-                    <th>Фамилия</th>
-                    <th>Группа</th>
-                    <th>Оценка</th>
-                </tr>
-            </thead>
+            <table>
 
-            <tbody>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Группа</th>
+                        <th>Оценка</th>
+                    </tr>
+                </thead>
 
-                <tr>
-                    <td>1</td>
-                    <td>Иван</td>
-                    <td>Иванов</td>
-                    <td rowspan="2">ИН11</td>
-                    <td>5</td>
-                </tr>
+                <tbody>
 
-                <tr>
-                    <td>2</td>
-                    <td>Пётр</td>
-                    <td>Петров</td>
-                    <td>4</td>
-                </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Иван</td>
+                        <td>Иванов</td>
+                        <td rowspan="2">ИН11</td>
+                        <td>5</td>
+                    </tr>
 
-                <tr>
-                    <td>3</td>
-                    <td>Анна</td>
-                    <td>Сидорова</td>
-                    <td>ИИ11</td>
-                    <td>5</td>
-                </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Пётр</td>
+                        <td>Петров</td>
+                        <td>4</td>
+                    </tr>
 
-                <tr>
-                    <td>4</td>
-                    <td>Мария</td>
-                    <td>Смирнова</td>
-                    <td>ФИ11</td>
-                    <td>4</td>
-                </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Анна</td>
+                        <td>Сидорова</td>
+                        <td>ИИ11</td>
+                        <td>5</td>
+                    </tr>
 
-                <tr>
-                    <td>5</td>
-                    <td>Алексей</td>
-                    <td>Кузнецов</td>
-                    <td rowspan="2">ПИ11</td>
-                    <td>3</td>
-                </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Мария</td>
+                        <td>Смирнова</td>
+                        <td>ФИ11</td>
+                        <td>4</td>
+                    </tr>
 
-                <tr>
-                    <td>6</td>
-                    <td>Дмитрий</td>
-                    <td>Волков</td>
-                    <td>5</td>
-                </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Алексей</td>
+                        <td>Кузнецов</td>
+                        <td rowspan="2">ПИ11</td>
+                        <td>3</td>
+                    </tr>
 
-                <tr>
-                    <td colspan="4">Средняя оценка</td>
-                    <td>4.3</td>
-                </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Дмитрий</td>
+                        <td>Волков</td>
+                        <td>5</td>
+                    </tr>
 
-            </tbody>
+                    <tr>
+                        <td colspan="4">Средняя оценка</td>
+                        <td>4.3</td>
+                    </tr>
 
-        </table>
+                </tbody>
+
+            </table>
+
+        </div>
 
 
         <!-- FTP -->
@@ -310,10 +312,8 @@
 
         <form action="/" method="POST">
 
-            <!-- ФИО -->
             <label>
                 ФИО:<br>
-
                 <input name="fio"
                        type="text"
                        pattern="[А-Яа-яЁёA-Za-z\s]+"
@@ -323,11 +323,8 @@
 
             <br><br>
 
-
-            <!-- ТЕЛЕФОН -->
             <label>
                 Телефон:<br>
-
                 <input name="phone"
                        type="tel"
                        pattern="[0-9]{11}"
@@ -337,24 +334,21 @@
                        title="Введите номер телефона из 11 цифр"
                        required>
             </label>
-    
+
             <br><br>
 
-            <!-- EMAIL -->
             <label>
                 E-mail:<br>
-
                 <input name="email"
                        type="email"
                        placeholder="Введите вашу почту"
                        required>
             </label>
+
             <br><br>
 
-            <!-- ДАТА РОЖДЕНИЯ -->
             <label>
                 Дата рождения:<br>
-
                 <input name="birthdate"
                        type="date"
                        min="1900-01-01"
@@ -364,8 +358,6 @@
 
             <br><br>
 
-
-            <!-- ПОЛ -->
             Пол:<br>
 
             <label>
@@ -373,7 +365,6 @@
                        name="gender"
                        value="male"
                        required>
-
                 Мужской
             </label>
 
@@ -381,14 +372,11 @@
                 <input type="radio"
                        name="gender"
                        value="female">
-
                 Женский
             </label>
 
             <br><br>
 
-
-            <!-- ЛЮБИМЫЙ ЯЗЫК -->
             <label>
                 Любимый язык программирования:
                 <br>
@@ -414,8 +402,6 @@
 
             <br><br>
 
-
-            <!-- БИОГРАФИЯ -->
             <label>
                 Биография:<br>
 
@@ -427,40 +413,32 @@
 
             <br><br>
 
-
-            <!-- СОГЛАСИЕ -->
             <label>
-
                 <input type="checkbox"
                        name="contract"
                        required>
-
                 С контрактом ознакомлен(а)
-
             </label>
 
             <br><br>
 
-
-            <!-- КНОПКА -->
             <input type="submit"
                    value="Сохранить">
 
         </form>
+        ```
 
     </main>
 
-
-    <!-- ПОДВАЛ -->
-
     <footer id="footer">
 
+        ```
         <div class="footer-content">
             © Сергей Синица
         </div>
+        ```
 
     </footer>
 
 </body>
 </html>
-```
