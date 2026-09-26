@@ -1,15 +1,43 @@
+/* Mobile First */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background-color: #0f3c2f;
     color: white;
+    font-family: Arial, sans-serif;
 }
+
+a {
+    color: #79c9a2;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ШАПКА */
 
 #header {
     width: 100%;
     background-color: black;
     padding: 15px;
-    box-sizing: border-box;
 }
+
+.header-content {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  
+}
+
+/* Логотип */
 
 .logo img {
     width: 60px;
@@ -17,27 +45,64 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #0d3d2f;
+  
 }
 
-.header-content {
-    max-width: 960px;
-    margin: auto;
+/* Меню */
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-#menu a {
-    color: lightseagreen;
-    margin-right: 20px;
+    #menu a {
+        color: lightseagreen;
+        margin: 0;
+    }
+
+/* Название */
+
+.site-name {
+    order: 3;
 }
+
+    .site-name h1 {
+        margin: 0;
+        text-align: center;
+    }
+
+/* КОНТЕНТ */
 
 .content {
-    max-width: 960px;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
     padding: 20px;
+}
+
+    .content h1,
+    .content h2 {
+        text-align: center;
+    }
+
+/* СПИСКИ */
+
+li {
+    margin-bottom: 8px;
+}
+
+/* ТАБЛИЦА */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 500px;
 }
 
 th,
@@ -59,14 +124,84 @@ tbody tr:nth-child(even) {
     background-color: #0d3d2f;
 }
 
-.content a {
-    color: #79c9a2;
+/* ФОРМА */
+
+form {
+    display: flex;
+    flex-direction: column;
 }
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    width: 150px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* ПОДВАЛ */
 
 #footer {
     width: 100%;
     background-color: black;
     padding: 20px;
-    box-sizing: border-box;
     color: white;
+    margin-top: 30px;
+}
+
+.footer-content {
+    width: 100%;
+    text-align: center;
+}
+
+/* ПЛАНШЕТ / ПК */
+
+@media (min-width: 768px) {
+    .header-content {
+        max-width: 960px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #menu {
+        flex-direction: row;
+        gap: 20px;
+    }
+        #menu a {
+            margin: 0;
+        }
+    .site-name {
+        order: 0;
+    }
+        .site-name h1 {
+            text-align: left;
+        }
+    .content {
+        max-width: 960px;
+    }
+}
+
+/* БОЛЬШОЙ ЭКРАН */
+
+@media (min-width: 1000px) {
+    .header-content {
+        padding: 0 20px;
+    }
+    .content {
+        padding: 20px 0;
+    }
 }
