@@ -1,5 +1,8 @@
 /* Mobile First */
 
+
+/* ОБЩИЕ НАСТРОЙКИ */
+
 * {
     box-sizing: border-box;
 }
@@ -19,6 +22,7 @@ img {
     max-width: 100%;
 }
 
+
 /* ШАПКА */
 
 #header {
@@ -30,61 +34,107 @@ img {
 .header-content {
     width: 100%;
     margin: 0 auto;
+
     display: flex;
     flex-direction: column;
+
     align-items: center;
+
     gap: 15px;
-  
 }
 
-/* Логотип */
+
+/* ЛОГОТИП */
+
+.logo {
+    order: 1;
+}
 
 .logo img {
     width: 60px;
     height: 60px;
+
     border-radius: 50%;
+
     object-fit: cover;
+
     border: 2px solid #0d3d2f;
-  
 }
 
-/* Меню */
+
+/* МЕНЮ */
 
 #menu {
+    order: 2;
+
     display: flex;
     flex-direction: column;
+
     align-items: center;
+
     gap: 10px;
 }
 
-    #menu a {
-        color: lightseagreen;
-        margin: 0;
-    }
+#menu a {
+    color: lightseagreen;
+    margin: 0;
+}
 
-/* Название */
+
+/* НАЗВАНИЕ САЙТА */
 
 .site-name {
     order: 3;
 }
 
-    .site-name h1 {
-        margin: 0;
-        text-align: center;
-    }
+.site-name h1 {
+    margin: 0;
+    text-align: center;
+}
 
-/* КОНТЕНТ */
+
+/* ОСНОВНОЙ КОНТЕНТ */
 
 .content {
     width: 100%;
+
     margin: 0 auto;
+
     padding: 20px;
+
+    display: flex;
+    flex-direction: column;
 }
 
-    .content h1,
-    .content h2 {
-        text-align: center;
-    }
+
+/*
+    ПОРЯДОК НА ТЕЛЕФОНЕ:
+
+    1. Таблица
+    2. Гиперссылки
+    3. FTP и форма
+*/
+
+.table-block {
+    order: 1;
+}
+
+.links-block {
+    order: 2;
+}
+
+.other-content {
+    order: 3;
+}
+
+
+/* ЗАГОЛОВКИ */
+
+.content h1,
+.content h2 {
+    text-align: center;
+}
+
 
 /* СПИСКИ */
 
@@ -92,23 +142,29 @@ li {
     margin-bottom: 8px;
 }
 
+
 /* ТАБЛИЦА */
 
 .table-wrapper {
     width: 100%;
+
     overflow-x: auto;
 }
 
 table {
     width: 100%;
+
     border-collapse: collapse;
+
     min-width: 500px;
 }
 
 th,
 td {
     border: 1px solid black;
+
     padding: 10px;
+
     text-align: center;
 }
 
@@ -124,6 +180,7 @@ tbody tr:nth-child(even) {
     background-color: #0d3d2f;
 }
 
+
 /* ФОРМА */
 
 form {
@@ -138,8 +195,11 @@ input[type="date"],
 select,
 textarea {
     width: 100%;
+
     max-width: 500px;
+
     padding: 8px;
+
     margin-top: 5px;
 }
 
@@ -149,59 +209,109 @@ textarea {
 
 input[type="submit"] {
     width: 150px;
+
     padding: 10px;
+
     cursor: pointer;
 }
+
 
 /* ПОДВАЛ */
 
 #footer {
     width: 100%;
+
     background-color: black;
+
     padding: 20px;
+
     color: white;
+
     margin-top: 30px;
 }
 
 .footer-content {
     width: 100%;
+
     text-align: center;
 }
+
 
 /* ПЛАНШЕТ / ПК */
 
 @media (min-width: 768px) {
+
+    /* ШАПКА */
+
     .header-content {
         max-width: 960px;
+
         flex-direction: row;
+
         align-items: center;
+
         justify-content: space-between;
     }
+
     #menu {
         flex-direction: row;
+
         gap: 20px;
     }
-        #menu a {
-            margin: 0;
-        }
+
+    #menu a {
+        margin: 0;
+    }
+
     .site-name {
         order: 0;
     }
-        .site-name h1 {
-            text-align: left;
-        }
+
+    .site-name h1 {
+        text-align: left;
+    }
+
+
+    /* КОНТЕНТ */
+
     .content {
         max-width: 960px;
     }
+
+
+    /*
+        НА ПК ВОЗВРАЩАЕМ СТАРЫЙ ПОРЯДОК:
+
+        1. Гиперссылки
+        2. Таблица
+        3. FTP и форма
+    */
+
+    .links-block {
+        order: 1;
+    }
+
+    .table-block {
+        order: 2;
+    }
+
+    .other-content {
+        order: 3;
+    }
+
 }
+
 
 /* БОЛЬШОЙ ЭКРАН */
 
 @media (min-width: 1000px) {
+
     .header-content {
         padding: 0 20px;
     }
+
     .content {
         padding: 20px 0;
     }
+
 }
